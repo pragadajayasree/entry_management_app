@@ -1,0 +1,7 @@
+.nav-link{
+color: black;
+font-weight:bold;
+}
+.nav-link:hover{
+color:grey;
+}

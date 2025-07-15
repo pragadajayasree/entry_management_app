@@ -1,0 +1,108 @@
+{% include 'header.html' %}
+<div class="container pb-5"><h1>Students</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">RegisterationId</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+        <th scope="col">PhoneNumber</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date</th>
+        <th scope="col">EntryTime</th>
+        <th scope="col">ExitTime</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for stu in students %}
+    <tr>
+      <th scope="row">{{stu.id}}</th>
+      <td>{{stu.reg_id}}</td>
+      <td>{{stu.name}}</td>
+        <td>{{stu.dept}}</td>
+        <td>{{stu.ph_no}}</td>
+        <td>{{stu.email}}</td>
+        <td>{{stu.date}}</td>
+        <td>{{stu.entry_time}}</td>
+        <td>{{stu.exit_time}}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+</div>
+<div class="container pb-5"><h1>Faculty</h1>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">RegisterationId</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+        <th scope="col">PhoneNumber</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date</th>
+        <th scope="col">EntryTime</th>
+        <th scope="col">ExitTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for fac in faculty %}
+    <tr>
+      <th scope="row">{{fac.id}}</th>
+      <td>{{fac.reg_id}}</td>
+      <td>{{fac.name}}</td>
+        <td>{{fac.dept}}</td>
+        <td>{{fac.ph_no}}</td>
+        <td>{{fac.email}}</td>
+        <td>{{fac.date}}</td>
+        <td>{{fac.entry_time}}</td>
+        <td>{{fac.exit_time}}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+</div>
+<div class="container pb-5"><h1>Visitors</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">S.no</th>
+      <th scope="col">Name</th>
+      <th scope="col">PhoneNumber</th>
+      <th scope="col">Email</th>
+        <th scope="col">FacultyName</th>
+        <th scope="col">FacultyDepartment</th>
+      <th scope="col">Reason</th>
+        <th scope="col">Date</th>
+        <th scope="col">EntryTime</th>
+        <th scope="col">ExitTime</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for vis in visitors %}
+    <tr>
+      <th scope="row">{{vis.id}}</th>
+      <td>{{vis.name}}</td>
+      <td>{{vis.ph_no}}</td>
+        <td>{{vis.email}}</td>
+        <td>{{vis.faculty_name}}</td>
+        <td>{{vis.faculty_dept}}</td>
+      <td>{{vis.reason}}</td>
+        <td>{{vis.date}}</td>
+        <td>{{vis.entry_time}}</td>
+        <td>{{vis.exit_time}}</td>
+       <td>{{vis.status}}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+</div>
+
+
+{% include 'footer.html' %}
